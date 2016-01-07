@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+NOT_LOADED	.\jiffy.erl	/^-define(NOT_LOADED, not_loaded(?LINE)).$/;"	d
+count_continuation_bytes	.\jiffy_utf8.erl	/^count_continuation_bytes(R, O) ->$/;"	f	module:jiffy_utf8
+decode	.\jiffy.erl	/^decode(Data) ->$/;"	f	module:jiffy
+decode	.\jiffy.erl	/^decode(Data, Opts) when is_binary(Data), is_list(Opts) ->$/;"	f	module:jiffy
+decode	.\jiffy.erl	/^decode(Data, Opts) when is_list(Data) ->$/;"	f	module:jiffy
+decode_loop	.\jiffy.erl	/^decode_loop(Data, Decoder, Val, Objs, Curr) ->$/;"	f	module:jiffy
+encode	.\jiffy.erl	/^encode(Data) ->$/;"	f	module:jiffy
+encode	.\jiffy.erl	/^encode(Data, Options) ->$/;"	f	module:jiffy
+encode_loop	.\jiffy.erl	/^encode_loop(Data, Options, Encoder, Stack, IOBuf) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode(Val) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode(Vals) when is_list(Vals) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode({Pairs}) when is_list(Pairs) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode({bigdbl, Value}) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode({bignum, Value}) ->$/;"	f	module:jiffy
+finish_decode	.\jiffy.erl	/^finish_decode({bignum_e, Value}) ->$/;"	f	module:jiffy
+finish_decode_arr	.\jiffy.erl	/^finish_decode_arr([V | Vals], Acc) ->$/;"	f	module:jiffy
+finish_decode_arr	.\jiffy.erl	/^finish_decode_arr([], Acc) ->$/;"	f	module:jiffy
+finish_decode_map	.\jiffy.erl	/^finish_decode_map(_, V) ->$/;"	f	module:jiffy
+finish_decode_obj	.\jiffy.erl	/^finish_decode_obj([], Acc) ->$/;"	f	module:jiffy
+finish_decode_obj	.\jiffy.erl	/^finish_decode_obj([{K, V} | Pairs], Acc) ->$/;"	f	module:jiffy
+finish_encode	.\jiffy.erl	/^finish_encode([<<_\/binary>>=B | Rest], Acc) ->$/;"	f	module:jiffy
+finish_encode	.\jiffy.erl	/^finish_encode([InvalidEjson | _], _) ->$/;"	f	module:jiffy
+finish_encode	.\jiffy.erl	/^finish_encode([Val | Rest], Acc) when is_integer(Val) ->$/;"	f	module:jiffy
+finish_encode	.\jiffy.erl	/^finish_encode([], Acc) ->$/;"	f	module:jiffy
+finish_encode	.\jiffy.erl	/^finish_encode(_, _) ->$/;"	f	module:jiffy
+fix	.\jiffy_utf8.erl	/^fix(Bin) when is_binary(Bin) ->$/;"	f	module:jiffy_utf8
+fix	.\jiffy_utf8.erl	/^fix(Val) ->$/;"	f	module:jiffy_utf8
+fix	.\jiffy_utf8.erl	/^fix(Values) when is_list(Values) ->$/;"	f	module:jiffy_utf8
+fix	.\jiffy_utf8.erl	/^fix({Props}) ->$/;"	f	module:jiffy_utf8
+fix_array	.\jiffy_utf8.erl	/^fix_array([Val | Rest], Acc0) ->$/;"	f	module:jiffy_utf8
+fix_array	.\jiffy_utf8.erl	/^fix_array([], Acc) ->$/;"	f	module:jiffy_utf8
+fix_bin	.\jiffy_utf8.erl	/^fix_bin(Bin) ->$/;"	f	module:jiffy_utf8
+fix_map	.\jiffy_utf8.erl	/^fix_map(K, V, Acc) ->$/;"	f	module:jiffy_utf8
+fix_props	.\jiffy_utf8.erl	/^fix_props([], Acc) ->$/;"	f	module:jiffy_utf8
+fix_props	.\jiffy_utf8.erl	/^fix_props([{K0, V0} | Rest], Acc) ->$/;"	f	module:jiffy_utf8
+init	.\jiffy.erl	/^init() ->$/;"	f	module:jiffy
+jiffy	.\jiffy.erl	/^-module(jiffy).$/;"	m
+jiffy_utf8	.\jiffy_utf8.erl	/^-module(jiffy_utf8).$/;"	m
+loose_decode	.\jiffy_utf8.erl	/^loose_decode(Bin, O, Acc) ->$/;"	f	module:jiffy_utf8
+maybe_map	.\jiffy.erl	/^maybe_map(Obj) when is_map(Obj) ->$/;"	f	module:jiffy
+maybe_map	.\jiffy.erl	/^maybe_map(Val) ->$/;"	f	module:jiffy
+maybe_map	.\jiffy_utf8.erl	/^maybe_map(Obj) when is_map(Obj) ->$/;"	f	module:jiffy_utf8
+maybe_map	.\jiffy_utf8.erl	/^maybe_map(Val) ->$/;"	f	module:jiffy_utf8
+nif_decode_init	.\jiffy.erl	/^nif_decode_init(_Data, _Opts) ->$/;"	f	module:jiffy
+nif_decode_iter	.\jiffy.erl	/^nif_decode_iter(_Data, _Decoder, _, _, _) ->$/;"	f	module:jiffy
+nif_encode_init	.\jiffy.erl	/^nif_encode_init(_Data, _Options) ->$/;"	f	module:jiffy
+nif_encode_iter	.\jiffy.erl	/^nif_encode_iter(_Encoder, _Stack, _IoList) ->$/;"	f	module:jiffy
+not_loaded	.\jiffy.erl	/^not_loaded(Line) ->$/;"	f	module:jiffy
+replace_garbage	.\jiffy_utf8.erl	/^replace_garbage([C | Rest], Acc) ->$/;"	f	module:jiffy_utf8
+replace_garbage	.\jiffy_utf8.erl	/^replace_garbage([], Acc) ->$/;"	f	module:jiffy_utf8
+try_combining	.\jiffy_utf8.erl	/^try_combining([C | Rest], Acc) ->$/;"	f	module:jiffy_utf8
+try_combining	.\jiffy_utf8.erl	/^try_combining([H, L | Rest], Acc) when H >= 16#D800, H =< 16#DFFF,$/;"	f	module:jiffy_utf8
+try_combining	.\jiffy_utf8.erl	/^try_combining([], Acc) ->$/;"	f	module:jiffy_utf8

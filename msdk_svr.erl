@@ -1,7 +1,13 @@
 -module (msdk_svr). 
 -export([listen/1]).
 -import (jiffy, [decode/1, decode/2, encode/1, encode/2]).
--import (tools, [utc/0, md5/1]).
+-import (tools, [sec/0, calc_sig/1]).
+
+-export ([jiffy_test/2]).
+
+jiffy_test(de,Json)-> decode(Json);
+
+jiffy_test(en, Er)-> encode(Er).
  
 %% TCP options for our listening socket.  The initial list atom
 %% specifies that we should receive data as lists of bytes (ie
@@ -39,7 +45,7 @@ handle_client(Socket) ->
     case gen_tcp:recv(Socket, 0) of
         {ok, Data} ->
             % 解析req
-            {[{"channel", Channel}, {"opertation", Opertation}, {"data", ReqData}]}  = decode(Data),
+            {[{"channel", Channel}, {"opertation", Opertation}, {"data", ReqData}]}  = decode(list_to_binary(Data)),
             case process_data(Channel, Opertation, ReqData) of
                 {ok, Body} -> 
                     OkMsg = encode({[{"res", "succ"}, {"body", decode(Body)}]}),
@@ -116,29 +122,12 @@ process_data(_, _, _)->
     {invalid_msg, unhandled_msg}.
 
 
-{
-    "appid": 100703379,
-    "openid": "A3284A812ECA15269F85AE1C2D94EB37",
-    "openkey": "933FE8C9AB9C585D7EABD04373B7155F",
-    "userip": "192.168.5.114"
-}
 
-    Url     = list:concat(["http://msdktest.qq.com/auth/verify_login/?timestamp=", timestamp, "&appid=", appid, "&sig=", sig, "&openid=", openid, "&encode=1"]),
-    Headers = [],
-    Content_type = "application/x-www-form-urlencoded",
-    ReqBody = encode(ReqData),
+% create_req("qq", "login", )->
+%     case ReqData of
+%         {[{"appid", Appid}, {"openid", Openid}, {"openkey", Openkey}, {"userip", Userip}]}) ->
+%             {}
+%     end
+%     {[{"appid", Appid}, {"openid", Openid}, {"openkey", Openkey}, {"userip", Userip}]})
 
 
-create_req("qq", "login", )->
-    case ReqData of
-        {[{"appid", Appid}, {"openid", Openid}, {"openkey", Openkey}, {"userip", Userip}]}) ->
-            {}
-    end
-    {[{"appid", Appid}, {"openid", Openid}, {"openkey", Openkey}, {"userip", Userip}]})
-
-
-utc_sec()->
-    {M, S, _} = erlang:timestamp(),  
-    M * 1000000 + S.
-
-calc_sig(Openkey)->

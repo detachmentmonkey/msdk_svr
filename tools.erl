@@ -1,5 +1,5 @@
 -module (tools).
--export ([sec/0, md5/1, calc_sig/1]).
+-export ([sec/0, calc_sig/1]).
 
 
 sec()->
